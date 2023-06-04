@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+    <!-- Meta etiketleri -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Türker Albayrak">
+    <title>KONGSEM</title>
+
+    <!-- Link Etiketleri -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/indexStyle.css">
+    <script src="https://kit.fontawesome.com/ea5f4226da.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>                         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>                            
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>                           
+    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="./javascript/indexScript.js"></script>
+
+    <!-- Repsonsive Etiketleri -->
+    <style>
+        /* Küçük ekranlarda megamenu'nun tam genişlikte görünmesini sağlayın */
+        @media (max-width: 768px) {
+            .megamenu {
+                position: static;
+            }
+        }
+    
+        /* Küçük ekranlarda alt dropdown menülerin gizlenmesini sağlayın */
+        @media (max-width: 992px) {
+            .dropdown-menu .dropdown-menu {
+                display: none;
+            }
+        }
+    
+        /* Küçük ekranlarda alt dropdown menülerin açılmasını sağlayan stil */
+        @media (max-width: 992px) {
+            .dropdown-menu .dropdown:hover > .dropdown-menu {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Sayfa -->
+    <span class="position-absolute trigger"></span>
+
+    <nav class="navbar navbar-expand-sm navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" style="margin-right: 12px" href="index.html">KONGSEM</a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+
+            <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar1">
+
+                <ul class="navbar-nav navbar-left">
+                    <!-- Yeni Sayfa Yönlendirme Dropdown Bulunmama-->
+                    <li class="nav-item dropdown megamenu"><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li class="nav-item dropdown megamenu"><a href="#duyurular" class="nav-link">Duyurular</a></li>
+                    <li class="nav-item dropdown megamenu"><a href="#kitaplar" class="nav-link">Kitaplar</a></li>
+                    <li class="nav-item dropdown megamenu"><a href="#yazımkural" class="nav-link">Yazım Kuralları</a></li>
+                    <li class="nav-item dropdown megamenu"><a href="#hakkımızda" class="nav-link">Hakkımızda</a></li>
+                    <li class="nav-item dropdown megamenu"><a href="#iletişim" class="nav-link">İletişim</a></li>
+
+                    <!-- Dil Özelliği -->
+
+                <!-- <div id="google_translate_element" style="position: absolute; top:35px; right: 100px;">
+                <script
+                        type="text/javascript">function googleTranslateElementInit() { new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar', autoDisplay: true }, 'google_translate_element'); }</script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            
+                </div> -->
+
+                <div id="google_translate_element" style="position: absolute; top:35px; right: 100px;"></div>
+ 
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                            {pageLanguage: 'tr'},
+                            'google_translate_element'
+                        );
+                    }
+                </script>
+ 
+                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                </script>
+
+                    <!-- Yeni Sayfa Yönlendirme Dropdown Bulundurma -->
+                <li class="nav-item dropdown megamenu"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Kongrelerimiz<span class="caret"></span></a>
+                    
+                <div class="dropdown-menu">
+
+                 <div class="container">
+
+                <div class="row">
+
+                <div class="col-lg-2">
+
+                    <h5 class="dropdown-title">KONGRELER</h5>
+
+                </div>
+
+                <div class="col-lg-2">
+
+                <ul class="dropdown-list">
+
+                <li class="title">Kongreler</li>
+
+                <!-- <li><a href="">2023 Kongre</a></li> -->
+
+                <li class="dropdown">
+                    <a href="#kongreler" class="dropdown-toggle" data-toggle="dropdown">2023 Kongreleri</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#2023kongreOcak">Ocak Kongresi</a></li>
+                        <li><a href="#2023kongreŞubat">Şubat Kongresi</a></li>
+                        <li><a href="#2023kongreMart">Mart Kongresi</a></li>
+                        <li><a href="#2023kongreNisan">Nisan Kongresi</a></li>
+                        <li><a href="#2023kongreMayıs">Mayıs Kongresi</a></li>
+                        <li><a href="#2023kongreHaziran">Haziran Kongresi</a></li>
+                        <li><a href="#2023kongreTemmuz">Temmuz Kongresi</a></li>
+                        <li><a href="#2023kongreAğustos">Ağustos Kongresi</a></li>
+                        <li><a href="#2023kongreEylül">Eylül Kongresi</a></li>
+                        <li><a href="#2023kongreEkim">Ekim Kongresi</a></li>
+                        <li><a href="#2023kongreKasım">Kasım Kongresi</a></li>
+                        <li><a href="#2023kongreAralık">Aralık Kongresi</a></li>
+                    </ul>
+                </li>
+
+                <!-- <li><a href="">2024 Kongre</a></li> -->
+
+                <li class="dropdown">
+                    <a href="#kongreler" class="dropdown-toggle" data-toggle="dropdown">2024 Kongreleri</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#2024kongreOcak">Ocak Kongresi</a></li>
+                        <li><a href="#2024kongreŞubat">Şubat Kongresi</a></li>
+                        <li><a href="#2024kongreMart">Mart Kongresi</a></li>
+                        <li><a href="#2024kongreNisan">Nisan Kongresi</a></li>
+                        <li><a href="#2024kongreMayıs">Mayıs Kongresi</a></li>
+                        <li><a href="#2024kongreHaziran">Haziran Kongresi</a></li>
+                        <li><a href="#2024kongreTemmuz">Temmuz Kongresi</a></li>
+                        <li><a href="#2024kongreAğustos">Ağustos Kongresi</a></li>
+                        <li><a href="#2024kongreEylül">Eylül Kongresi</a></li>
+                        <li><a href="#2024kongreEkim">Ekim Kongresi</a></li>
+                        <li><a href="#2024kongreKasım">Kasım Kongresi</a></li>
+                        <li><a href="#2024kongreAralık">Aralık Kongresi</a></li>
+                    </ul>
+                </li>
+
+                <!-- <li><a href="">2025 Kongreleri</a></li> -->
+
+                <li class="dropdown">
+                    <a href="#kongreler" class="dropdown-toggle" data-toggle="dropdown">2025 Kongreleri</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#2025kongreOcak">Ocak Kongresi</a></li>
+                        <li><a href="#2025kongreŞubat">Şubat Kongresi</a></li>
+                        <li><a href="#2025kongreMart">Mart Kongresi</a></li>
+                        <li><a href="#2025kongreNisan">Nisan Kongresi</a></li>
+                        <li><a href="#2025kongreMayıs">Mayıs Kongresi</a></li>
+                        <li><a href="#2025kongreHaziran">Haziran Kongresi</a></li>
+                        <li><a href="#2025kongreTemmuz">Temmuz Kongresi</a></li>
+                        <li><a href="#2025kongreAğustos">Ağustos Kongresi</a></li>
+                        <li><a href="#2025kongreEylül">Eylül Kongresi</a></li>
+                        <li><a href="#2025kongreEkim">Ekim Kongresi</a></li>
+                        <li><a href="#2025kongreKasım">Kasım Kongresi</a></li>
+                        <li><a href="#2025kongreAralık">Aralık Kongresi</a></li>
+                    </ul>
+                </li>
+                
+
+            </ul>
+                                    
+        <!-- Yeni Dropdown -->
+        <li class="nav-item dropdown megamenu"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dergilerimiz<span class="caret"></span></a>
+                    
+        <div class="dropdown-menu">
+                    
+        <div class="container">
+                    
+        <div class="row">
+                    
+        <div class="col-lg-2">
+                    
+            <h5 class="dropdown-title">DERGİLER</h5>
+                    
+        </div>
+                    
+        <div class="col-lg-2">
+                    
+                <ul class="dropdown-list">
+                    
+                <li class="title">Dergiler</li>
+                    
+                <li><a href="">Dergi 1</a></li>
+                    
+                <li><a href="">Dergi 2</a></li>
+                    
+                <li><a href="">Dergi 3</a></li>
+                    
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <main>
+
+            <div id="anasayfa" class="main-content" style="width: 100%; height: 650px;">
+                <!-- <h1 style="text-align: center;">AnaSayfa-Slider</h1> -->
+                <h1 style="text-align: center; color: black; padding: 20px;">Kongsem</h1>
+                <div id="wrapper">
+                    <div id="slider-wrap">
+                       <ul id="slider">
+                          <li data-color="#1abc9c">
+                           <div>
+                               <h3>Slide #1</h3>
+                               <span>Sub-title #1</span>
+                           </div>                
+                           <img src="https://cdn.pixabay.com/photo/2023/05/03/12/25/boats-7967544_640.jpg" alt="">
+                        </li>
+                        
+                        <li data-color="#3498db">
+                           <div>
+                               <h3>Slide #2</h3>
+                               <span>Sub-title #2</span>
+                           </div>
+                           <img src="https://cdn.pixabay.com/photo/2023/05/03/12/25/boats-7967544_640.jpg" alt="">
+                        </li>
+                        
+                        <li data-color="#9b59b6">
+                           <div>
+                               <h3>Slide #3</h3>
+                               <span>Sub-title #3</span>
+                           </div>
+                           <img src="https://cdn.pixabay.com/photo/2023/05/03/12/25/boats-7967544_640.jpg" alt="">
+                        </li>
+                        
+                        <li data-color="#34495e">
+                           <div>
+                               <h3>Slide #4</h3>
+                               <span>Sub-title #4</span>
+                           </div>
+                           <img src="https://cdn.pixabay.com/photo/2023/05/03/12/25/boats-7967544_640.jpg" alt="">
+                        </li>
+                        
+                        <li data-color="#e74c3c">
+                           <div>
+                               <h3>Slide #5</h3>
+                               <span>Sub-title #5</span>
+                           </div>
+                           <img src="https://cdn.pixabay.com/photo/2023/05/03/12/25/boats-7967544_640.jpg" alt="">
+                        </li>
+                        
+                        
+                     </ul>
+                     
+                      <!--controls-->
+                     <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
+                     <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
+                     <div id="counter"></div>
+                     
+                     <div id="pagination-wrap">
+                       <ul>
+                       </ul>
+                     </div>
+                     <!--controls-->  
+                            
+                 </div>
+                 
+                 
+              </div>
+              <p id="main-page-text" style="margin-top: 5px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita mollitia omnis perspiciatis culpa asperiores sed animi, repellendus esse, facilis facere impedit pariatur eum reiciendis quod deleniti eveniet, dolore odit totam!</p>
+              <style>
+              #main-page-text {
+                  text-align: center;
+                  position: relative;
+                  color: #fff;
+                  top: -70px;
+                  margin: 0 auto;
+              }
+
+              #wrapper{
+                  top:-50px;
+                width:600px;
+                margin:50px auto;
+                height:400px;
+                position:relative;
+                color:#fff;
+                text-shadow:rgba(0,0,0,0.1) 2px 2px 0px;	
+              }
+
+              #slider-wrap{
+                width:auto; /* 600 */
+                height:400px;
+                position:relative;
+                overflow:hidden;
+              }
+
+              #slider-wrap ul#slider{
+                width:100%;
+                height:100%;
+                
+                position:absolute;
+                top:0;
+                left:0;		
+              }
+
+              #slider-wrap ul#slider li{
+                float:left;
+                position:relative;
+                width:600px;
+                height:400px;	
+              }
+
+              #slider-wrap ul#slider li > div{
+                position:absolute;
+                top:20px;
+                left:35px;	
+              }
+
+              #slider-wrap ul#slider li > div h3{
+                font-size:36px;
+                text-transform:uppercase;	
+              }
+
+              #slider-wrap ul#slider li > div span{
+                font-family: Neucha, Arial, sans serif;
+                font-size:21px;
+              }
+
+              #slider-wrap ul#slider li i{
+                text-align:center;
+                line-height:400px;
+                display:block;
+                width:100%;
+                font-size:90px;	
+              }
+
+
+              /*btns*/
+              .btns{
+
+                position:absolute;
+                width:50px;
+                height:60px;
+                top:50%;
+                margin-top:-25px;
+                line-height:57px;
+                text-align:center;
+                cursor:pointer;	
+                background:rgba(0,0,0,0.1);
+                z-index:100;
+                
+              }
+
+              .btns:hover{
+                background:rgba(0,0,0,0.3);	
+              }
+
+              #next{right:-50px; border-radius:7px 0px 0px 7px;}
+              #previous{left:-50px; border-radius:0px 7px 7px 7px;}
+              #counter{
+                top: 30px; 
+                right:35px; 
+                width:auto;
+                position:absolute;
+              }
+
+              #slider-wrap.active #next{right:0px;}
+              #slider-wrap.active #previous{left:0px;}
+
+
+              /*bar*/
+              #pagination-wrap{
+                min-width:20px;
+                margin-top:350px;
+                margin-left: auto; 
+                margin-right: auto;
+                height:15px;
+                position:relative;
+                text-align:center;
+              }
+
+              #pagination-wrap ul {
+                width:100%;
+              }
+
+              #pagination-wrap ul li{
+                margin: 0 4px;
+                display: inline-block;
+                width:5px;
+                height:5px;
+                border-radius:50%;
+                background:#fff;
+                opacity:0.5;
+                position:relative;
+                top:0;
+                
+                
+              }
+
+              #pagination-wrap ul li.active{
+                width:12px;
+                height:12px;
+                top:3px;
+                opacity:1;
+                box-shadow:rgba(0,0,0,0.1) 1px 1px 0px;	
+              }
+
+
+
+
+              /*Header*/
+              h1, h2{text-shadow:none; text-align:center;}
+              h1{	color: #666; text-transform:uppercase;	font-size:36px;}
+              h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; margin-bottom:30px;} 
+
+
+
+
+              /*ANIMATION*/
+              #slider-wrap ul, #pagination-wrap ul li{
+                -webkit-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+                -moz-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+                -o-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+                -ms-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+                transition: all 0.3s cubic-bezier(1,.01,.32,1);	
+              }
+              </style>
+
+              <script>
+                //current position
+                var pos = 0;
+                //number of slides
+                var totalSlides = $('#slider-wrap ul li').length;
+                //get the slide width
+                var sliderWidth = $('#slider-wrap').width();
+
+
+                $(document).ready(function(){
+                  
+                  
+                  /*****************
+                   BUILD THE SLIDER
+                  *****************/
+                  //set width to be 'x' times the number of slides
+                  $('#slider-wrap ul#slider').width(sliderWidth*totalSlides);
+                  
+                    //next slide 	
+                  $('#next').click(function(){
+                    slideRight();
+                  });
+                  
+                  //previous slide
+                  $('#previous').click(function(){
+                    slideLeft();
+                  });
+                  
+                  
+                  
+                  /*************************
+                  //*> OPTIONAL SETTINGS
+                  ************************/
+                  //automatic slider
+                  var autoSlider = setInterval(slideRight, 3000);
+                  
+                  //for each slide 
+                  $.each($('#slider-wrap ul li'), function() { 
+                    //set its color
+                    var c = $(this).attr("data-color");
+                    $(this).css("background",c);
+                    
+                    //create a pagination
+                    var li = document.createElement('li');
+                    $('#pagination-wrap ul').append(li);	   
+                  });
+                  
+                  //counter
+                  countSlides();
+                  
+                  //pagination
+                  pagination();
+                  
+                  //hide/show controls/btns when hover
+                  //pause automatic slide when hover
+                  $('#slider-wrap').hover(
+                    function(){ $(this).addClass('active'); clearInterval(autoSlider); }, 
+                    function(){ $(this).removeClass('active'); autoSlider = setInterval(slideRight, 3000); }
+                  );
+                  
+                  
+
+                });//DOCUMENT READY
+
+                /***********
+                SLIDE LEFT
+                ************/
+                function slideLeft(){
+                  pos--;
+                  if(pos==-1){ pos = totalSlides-1; }
+                  $('#slider-wrap ul#slider').css('left', -(sliderWidth*pos)); 	
+                  
+                  //*> optional
+                  countSlides();
+                  pagination();
+                }
+
+                /************
+                SLIDE RIGHT
+                *************/
+                function slideRight(){
+                  pos++;
+                  if(pos==totalSlides){ pos = 0; }
+                  $('#slider-wrap ul#slider').css('left', -(sliderWidth*pos)); 
+                  
+                  //*> optional 
+                  countSlides();
+                  pagination();
+                }
+
+                /************************
+                //*> OPTIONAL SETTINGS
+                ************************/
+                function countSlides(){
+                  $('#counter').html(pos+1 + ' / ' + totalSlides);
+                }
+
+                function pagination(){
+                  $('#pagination-wrap ul li').removeClass('active');
+                  $('#pagination-wrap ul li:eq('+pos+')').addClass('active');
+                }
+              </script>
+
+            </div>
+
+            <hr>
+            <div id="duyurular" class="duyuru-content" style="width: 100%; height: auto; display: flex; flex-direction: column;">
+
+                <h1 style="text-align: center; color: black; margin: 60px;">-Duyurular-</h1>
+
+                <div class="duyuru-items" style="margin: 10px; border: 2px solid black; height: auto; background: rgba(218, 167, 167, 0.1); border-radius: 6px;">
+
+                <h3 style="margin-left: 5px; font-style: italic;">Duyuru Başlığı:</h3>
+                <p style="margin-left: 8px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, minus!</p>
+                <a href="#" style=" text-align:center; margin-left: 8px; color: black; text-decoration: none; width: 60px; height: 30px; border: 2px solid black; border-radius: 6px; background: #fff; display: block; margin-bottom: 7px;">İncele</a>
+
+                </div>
+
+                <div class="duyuru-items" style="margin: 10px; border: 2px solid black; height: auto; background: rgba(218, 167, 167, 0.1); border-radius: 6px;">
+
+                    <h3 style="margin-left: 5px; font-style: italic;">Duyuru Başlığı:</h3>
+                    <p style="margin-left: 8px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, minus!</p>
+                    <a href="#" style=" text-align:center; margin-left: 8px; color: black; text-decoration: none; width: 60px; height: 30px; border: 2px solid black; border-radius: 6px; background: #fff; display: block; margin-bottom: 7px;">İncele</a>
+    
+                </div>
+
+                <div class="duyuru-items" style="margin: 10px; border: 2px solid black; height: auto; background: rgba(218, 167, 167, 0.1); border-radius: 6px;">
+
+                    <h3 style="margin-left: 5px; font-style: italic;">Duyuru Başlığı:</h3>
+                    <p style="margin-left: 8px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, minus!</p>
+                    <a href="#" style=" text-align:center; margin-left: 8px; color: black; text-decoration: none; width: 60px; height: 30px; border: 2px solid black; border-radius: 6px; background: #fff; display: block; margin-bottom: 7px;">İncele</a>
+    
+                </div>
+
+            </div>
+
+            <hr>
+            <div id="kitaplar" class="kitap-content">
+
+                <h1 style="text-align: center; color: black; margin: 20px;">-Kitaplar-</h1>
+                <section class="hero-section">
+                    <div class="card-grid">
+                      <a class="card" href="#">
+                        <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+                        <div class="card__content">
+                          <p class="card__category">Category</p>
+                          <h3 class="card__heading">Example Card Heading</h3>
+                        </div>
+                      </a>
+                      <a class="card" href="#">
+                        <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                        <div class="card__content">
+                          <p class="card__category">Category</p>
+                          <h3 class="card__heading">Example Card Heading</h3>
+                        </div>
+                      </a>
+                      <a class="card" href="#">
+                        <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                        <div class="card__content">
+                          <p class="card__category">Category</p>
+                          <h3 class="card__heading">Example Card Heading</h3>
+                        </div>
+                      </li>
+                      <a class="card" href="#">
+                        <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                        <div class="card__content">
+                          <p class="card__category">Category</p>
+                          <h3 class="card__heading">Example Card Heading</h3>
+                        </div>
+                      </a>
+                      <a class="card" href="#">
+                        <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                        <div class="card__content">
+                          <p class="card__category">Category</p>
+                          <h3 class="card__heading">Example Card Heading</h3>
+                        </div>
+                      </a>
+                      <a class="card" href="#">
+                        <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                        <div class="card__content">
+                          <p class="card__category">Category</p>
+                          <h3 class="card__heading">Example Card Heading</h3>
+                        </div>
+                      </a>
+                      <a class="card" href="#">
+                        <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                        <div class="card__content">
+                          <p class="card__category">Category</p>
+                          <h3 class="card__heading">Example Card Heading</h3>
+                        </div>
+                      </a>
+                      <a class="card" href="#">
+                        <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                        <div class="card__content">
+                          <p class="card__category">Category</p>
+                          <h3 class="card__heading">Example Card Heading</h3>
+                        </div>
+                      </a>
+                    <div>
+                  </section>
+
+                  <style>
+                  :root{
+                    --background-dark: #2d3548;
+                    --text-light: rgba(255,255,255,0.6);
+                    --text-lighter: rgba(255,255,255,0.9);
+                    --spacing-s: 8px;
+                    --spacing-m: 16px;
+                    --spacing-l: 24px;
+                    --spacing-xl: 32px;
+                    --spacing-xxl: 64px;
+                    --width-container: 1200px;
+                  }
+
+
+
+                  .hero-section{
+                    align-items: flex-start;
+                    display: flex;
+                    min-height: 100%;
+                    justify-content: center;
+                    padding: var(--spacing-xxl) var(--spacing-l);
+                  }
+
+                  .card-grid{
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-column-gap: var(--spacing-l);
+                    grid-row-gap: var(--spacing-l);
+                    max-width: var(--width-container);
+                    width: 100%;
+                  }
+
+                  @media(min-width: 540px){
+                    .card-grid{
+                      grid-template-columns: repeat(2, 1fr); 
+                    }
+                  }
+
+                  @media(min-width: 960px){
+                    .card-grid{
+                      grid-template-columns: repeat(4, 1fr); 
+                    }
+                  }
+
+                  .card{
+                    list-style: none;
+                    position: relative;
+                  }
+
+                  .card:before{
+                    content: '';
+                    display: block;
+                    padding-bottom: 150%;
+                    width: 100%;
+                  }
+
+                  .card__background{
+                    background-size: cover;
+                    background-position: center;
+                    /* border-radius: 12px; */
+                    bottom: 0;
+                    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transform-origin: center;
+                    transform: scale(1) translateZ(0);
+                    transition: 
+                      filter 200ms linear,
+                      transform 200ms linear;
+                  }
+
+                  .card:hover .card__background{
+                    transform: scale(1.05) translateZ(0);
+                  }
+
+                  .card-grid:hover > .card:not(:hover) .card__background{
+                    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+                  }
+
+                  .card__content{
+                    left: 0;
+                    padding: var(--spacing-l);
+                    position: absolute;
+                    top: 0;
+                  }
+
+                  .card__category{
+                    color: var(--text-light);
+                    font-size: 0.9rem;
+                    margin-bottom: var(--spacing-s);
+                    text-transform: uppercase;
+                  }
+
+                  .card__heading{
+                    color: var(--text-lighter);
+                    font-size: 1.9rem;
+                    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+                    line-height: 1.4;
+                    word-spacing: 100vw;
+                  }
+                  </style>
+
+            </div>
+
+            <hr>
+            <div class="dergiler" style="height: auto;">
+              <h1 style="text-align: center; color: black; margin: 20px;">-Dergiler-</h1>
+              <section class="hero-section">
+                <div class="card-grid">
+                  <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+                    <div class="card__content">
+                      <p class="card__category">Category</p>
+                      <h3 class="card__heading">Example Card Heading</h3>
+                    </div>
+                  </a>
+                  <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__content">
+                      <p class="card__category">Category</p>
+                      <h3 class="card__heading">Example Card Heading</h3>
+                    </div>
+                  </a>
+                  <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__content">
+                      <p class="card__category">Category</p>
+                      <h3 class="card__heading">Example Card Heading</h3>
+                    </div>
+                  </li>
+                  <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__content">
+                      <p class="card__category">Category</p>
+                      <h3 class="card__heading">Example Card Heading</h3>
+                    </div>
+                  </a>
+                  <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__content">
+                      <p class="card__category">Category</p>
+                      <h3 class="card__heading">Example Card Heading</h3>
+                    </div>
+                  </a>
+                  <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__content">
+                      <p class="card__category">Category</p>
+                      <h3 class="card__heading">Example Card Heading</h3>
+                    </div>
+                  </a>
+                  <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__content">
+                      <p class="card__category">Category</p>
+                      <h3 class="card__heading">Example Card Heading</h3>
+                    </div>
+                  </a>
+                  <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__content">
+                      <p class="card__category">Category</p>
+                      <h3 class="card__heading">Example Card Heading</h3>
+                    </div>
+                  </a>
+                <div>
+              </section>
+
+              <style>
+                :root{
+                  --background-dark: #2d3548;
+                  --text-light: rgba(255,255,255,0.6);
+                  --text-lighter: rgba(255,255,255,0.9);
+                  --spacing-s: 8px;
+                  --spacing-m: 16px;
+                  --spacing-l: 24px;
+                  --spacing-xl: 32px;
+                  --spacing-xxl: 64px;
+                  --width-container: 1200px;
+                }
+
+
+
+                .hero-section{
+                  align-items: flex-start;
+                  display: flex;
+                  min-height: 100%;
+                  justify-content: center;
+                  padding: var(--spacing-xxl) var(--spacing-l);
+                }
+
+                .card-grid{
+                  display: grid;
+                  grid-template-columns: repeat(1, 1fr);
+                  grid-column-gap: var(--spacing-l);
+                  grid-row-gap: var(--spacing-l);
+                  max-width: var(--width-container);
+                  width: 100%;
+                }
+
+                @media(min-width: 540px){
+                  .card-grid{
+                    grid-template-columns: repeat(2, 1fr); 
+                  }
+                }
+
+                @media(min-width: 960px){
+                  .card-grid{
+                    grid-template-columns: repeat(4, 1fr); 
+                  }
+                }
+
+                .card{
+                  list-style: none;
+                  position: relative;
+                }
+
+                .card:before{
+                  content: '';
+                  display: block;
+                  padding-bottom: 150%;
+                  width: 100%;
+                }
+
+                .card__background{
+                  background-size: cover;
+                  background-position: center;
+                  /* border-radius: 12px; */
+                  bottom: 0;
+                  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+                  left: 0;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  transform-origin: center;
+                  transform: scale(1) translateZ(0);
+                  transition: 
+                    filter 200ms linear,
+                    transform 200ms linear;
+                }
+
+                .card:hover .card__background{
+                  transform: scale(1.05) translateZ(0);
+                }
+
+                .card-grid:hover > .card:not(:hover) .card__background{
+                  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+                }
+
+                .card__content{
+                  left: 0;
+                  padding: var(--spacing-l);
+                  position: absolute;
+                  top: 0;
+                }
+
+                .card__category{
+                  color: var(--text-light);
+                  font-size: 0.9rem;
+                  margin-bottom: var(--spacing-s);
+                  text-transform: uppercase;
+                }
+
+                .card__heading{
+                  color: var(--text-lighter);
+                  font-size: 1.9rem;
+                  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+                  line-height: 1.4;
+                  word-spacing: 100vw;
+                }
+                </style>
+              
+              </div>
+
+            </div>
+
+            <hr>
+            <div id="yazımkural" class="yazim-content">
+
+                <h1 style="text-align: center; color: black; margin: 20px;">-Yazım Kuralları-</h1>
+                <div class="duyuru-items" style="margin: 10px; border: 2px solid black; height: auto; background: rgba(218, 167, 167, 0.1); border-radius: 6px;">
+
+                    <h3 style="margin-left: 5px; font-style: italic; text-align: center;">Yazım Kuralları</h3>
+                    <p style="margin-left: 8px; text-align: center;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, minus!</p>
+                    <a href="#" style=" text-align:center; margin-left: 8px; color: black; text-decoration: none; width: 60px; height: 30px; border: 2px solid black; border-radius: 6px; background: #fff; display: block; margin-bottom: 7px;">PDF</a>
+    
+                </div>
+
+            </div>
+
+            <hr>
+            <div id="hakkımızda" class="hakkımızda-content">
+
+                <h1 style="text-align: center; color: black; margin: 20px;">-Hakkımızda-</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, architecto.</p>
+
+                
+            </div>
+
+            <hr>
+            <div id="iletişim" class="iletisim-content">
+
+                <h1 style="text-align: center; color: black; margin: 20px;">-İletişim-</h1>
+
+                <div class="container-one">
+                    
+                    <form action="send_email.php" method="post">
+                  
+                      <label for="name">Adınız:</label>
+                      <input type="text" id="name" name="name" placeholder="Adınız">
+                      
+                  
+                      <label for="email">E-Mail:</label>
+                      <br>
+                      <input type="email" id="email" name="email" placeholder="E-Mail">
+                      <br>
+                  
+                      <label for="message">Mesajınız:</label>
+                      <textarea id="message" name="message" placeholder="Mesajınızı Giriniz..." style="height:200px"></textarea>
+                  
+                      <input type="submit" value="Gönder">
+                  
+                    </form>
+
+                    <style>
+                        /* Style inputs with type="text", select elements and textareas */
+                        input[type=text],textarea {
+                          width: 100%; /* Full width */
+                          padding: 12px; /* Some padding */ 
+                          border: 1px solid #ccc; /* Gray border */
+                          border-radius: 4px; /* Rounded borders */
+                          box-sizing: border-box; /* Make sure that padding and width stays in place */
+                          margin-top: 6px; /* Add a top margin */
+                          margin-bottom: 16px; /* Bottom margin */
+                          resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+                        }
+
+                        input[type=email],textarea {
+                          width: 100%; /* Full width */
+                          padding: 12px; /* Some padding */ 
+                          border: 1px solid #ccc; /* Gray border */
+                          border-radius: 4px; /* Rounded borders */
+                          box-sizing: border-box; /* Make sure that padding and width stays in place */
+                          margin-top: 6px; /* Add a top margin */
+                          margin-bottom: 16px; /* Bottom margin */
+                          resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+                        }
+
+
+                        /* Style the submit button with a specific background color etc */
+                        input[type=submit] {
+                          background-color: #04AA6D;
+                          color: white;
+                          padding: 12px 20px;
+                          border: none;
+                          border-radius: 4px;
+                          cursor: pointer;
+                        }
+
+                        /* When moving the mouse over the submit button, add a darker green color */
+                        input[type=submit]:hover {
+                          opacity: 0.6;
+                        }
+
+                        /* Add a background color and some padding around the form */
+                        .container-one {
+                          border-radius: 5px;
+                          background-color: #f2f2f2;
+                          padding: 20px;
+                        }
+                    </style>
+                  </div>
+            </div>
+        </main>
+    </section>
+
+    <hr>
+    <section class="kongre-content">
+      <main>
+      <h1 style="text-align: center; color: black; margin: 20px;">-Kongreler-</h1>
+      </main>
+
+      <main>
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | OCAK</h2>
+      <div id="2023kongreOcak" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | ŞUBAT</h2>
+      <main>
+      <div id="2023kongreŞubat" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | MART</h2>
+      <main>
+      <div id="2023kongreMart" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | NİSAN</h2>
+      <main>
+      <div id="2023kongreNisan" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | MAYIS</h2>
+      <main>
+      <div id="2023kongreMayıs" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | HAZİRAN</h2>
+      <main>
+      <div id="2023kongreHaziran" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | TEMMUZ</h2>
+      <main>
+      <div id="2023kongreTemmuz" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | AĞUSTOS</h2>
+      <main>
+      <div id="2023kongreAğustos" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | EYLÜL</h2>
+      <main>
+      <div id="2023kongreEylül" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | EKİM</h2>
+      <main>
+      <div id="2023kongreEkim" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | KASIM</h2>
+      <main>
+      <div id="2023kongreKasım" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+
+      <h2 style="float: left; color: #ccc; font-size: x-large; margin-left: 10px;">2023 Kongreleri | ARALIK</h2>
+      <main>
+      <div id="2023kongreAralık" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | OCAK</h2>
+      <main>
+      <div id="2024kongreOcak" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | ŞUBAT</h2>
+      <main>
+      <div id="2024kongreŞubat" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | MART</h2>
+      <main>
+      <div id="2024kongreMart" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | NİSAN</h2>
+      <main>
+      <div id="2024kongrenNisan" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | MAYIS</h2>
+      <main>
+      <div id="2024kongrMayıs" class="2023kongre" style="height: auto;">
+          <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | HAZİRAN</h2>
+      <main>
+      <div id="2024kongreHaziran" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | TEMMUZ</h2>
+      <main>
+      <div id="2024kongreTemmuz" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | AĞUSTOS</h2>
+      <main>
+      <div id="2024kongreAğustos" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | EYLÜL</h2>
+      <main>
+      <div id="2024kongreEylül" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | EKİM</h2>
+      <main>
+      <div id="2024kongreEkim" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | KASIM</h2>
+      <main>
+      <div id="2024kongreKasım" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+      <h2 style="float: left; color: #2632d2; font-size: x-large; margin-left: 10px;">2024 Kongreleri | ARALIK</h2>
+      <main>
+      <div id="2024kongreAralık" class="2023kongre" style="height: auto;">
+        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+      </div>
+      </main>
+      </section>
+
+      <section>
+        <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | OCAK</h2>
+        <main>
+        <div id="2025kongreOcak" class="2023kongre" style="height: auto;">
+          <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+        </div>
+        </main>
+        </section>
+
+        <section>
+          <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | ŞUBAT</h2>
+          <main>
+          <div id="2025kongreŞubat" class="2023kongre" style="height: auto;">
+            <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+          </div>
+          </main>
+          </section>
+
+          <section>
+            <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | MART</h2>
+            <main>
+            <div id="2025kongreMart" class="2023kongre" style="height: auto;">
+              <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+            </div>
+            </main>
+            </section>
+
+            <section>
+              <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | NİSAN</h2>
+              <main>
+              <div id="2025kongreNisan" class="2023kongre" style="height: auto;">
+                <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+              </div>
+              </main>
+              </section>
+
+              <section>
+                <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | MAYIS</h2>
+                <main>
+                <div id="2025kongreMayıs" class="2023kongre" style="height: auto;">
+                  <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+                </div>
+                </main>
+                </section>
+
+                <section>
+                  <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | HAZİRAN</h2>
+                  <main>
+                  <div id="2025kongreHaziran" class="2023kongre" style="height: auto;">
+                    <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+                  </div>
+                  </main>
+                  </section>
+
+                  <section>
+                    <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | TEMMUZ</h2>
+                    <main>
+                    <div id="2025kongreTemmuz" class="2023kongre" style="height: auto;">
+                      <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+                    </div>
+                    </main>
+                    </section>
+
+                    <section>
+                      <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | AĞUSTOS</h2>
+                      <main>
+                      <div id="2025kongreAğustos" class="2023kongre" style="height: auto;">
+                        <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+                      </div>
+                      </main>
+                      </section>
+
+                      <section>
+                        <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | EYLÜL</h2>
+                        <main>
+                        <div id="2025kongreEylül" class="2023kongre" style="height: auto;">
+                          <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+                        </div>
+                        </main>
+                        </section>
+
+                        <section>
+                          <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | EKİM</h2>
+                          <main>
+                          <div id="2025kongreEkim" class="2023kongre" style="height: auto;">
+                            <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+                          </div>
+                          </main>
+                          </section>
+
+                          <section>
+                            <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | KASIM</h2>
+                            <main>
+                            <div id="2025kongreKasım" class="2023kongre" style="height: auto;">
+                              <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+                            </div>
+                            </main>
+                            </section>
+
+                            <section>
+                              <h2 style="float: left; color: #84ff74; font-size: x-large; margin-left: 10px;">2025 Kongreleri | ARALIK</h2>
+                              <main>
+                              <div id="2025kongreAralık" class="2023kongre" style="height: auto;">
+                                <p style="float: left; margin-left: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate, dignissimos repellat amet deleniti explicabo quos itaque corrupti. Excepturi, obcaecati. Quisquam amet facere quod sunt expedita aut, nobis atque sit!</p>
+                              </div>
+                              </main>
+                              </section>
+
+    </section>
+
+  </section>
+  
+
+</body>
+</html>
